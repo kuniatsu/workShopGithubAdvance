@@ -43,12 +43,49 @@ $ git clone `URL`
 ```
 
 ---
-## *Lesson2 Mergeしたら内容が消える*  
+## *Lesson2 Mergeをする*  
 
+masterブランチから新しい自分用のbranchを切って  
+profile.mdファイルを変更し  
+masterブランチにmergeしましょう。
 
 ```
-$ git clone `URL`
+//リポジトリの情報を更新
+$ git fetch
+
+//自分のbranchを確認
+$ git branch -a
+
+//自分のbranchに変更
+$ git checkout `名前branch`
+
+//profile.mdファイルを変更する
+
+//masterブランチに変更
+$ git checkout master
+
+//使用しているbranchを確認
+$ git branch
+
+//masterブランチに自分branchの情報をmergeする
+$ git merge `名前branch`
+
 ```
+master
+
+
+---
+## *Lesson3 Mergeしたら内容が消える???*  
+
+masterブランチのprofile.mdの
+
+```
+$ git checkout kuniatsu
+```
+kuniatsuブランチのprofile.mdにはプロフィールが書かれている。
+このブランチをmasterブランチにmergeして、
+masterブランチにプロフィールを反映したいが、
+反映されない。それはなぜか？？？
 
 
 
