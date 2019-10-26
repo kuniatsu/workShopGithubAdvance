@@ -108,10 +108,26 @@ $ git log
 ---
 ## *Lesson5 cherry-pickで複数のcommitをする1*  
 
-別のbranchの複数の必要なcommitを選択する  
+別のbranchの複数の必要なcommitを選択する 
+  
+masterからcherry-pick用のbranchを作成しcheckoutする  
+profile.mdの「3.」の下に「必要」と記載しcommit  
+次に「不要」と記載しcommit  
+上記を３回繰り返し、  
+```
+必要
+不要
+必要
+不要
+必要
+不要
+```
+と6行追加する。
 
 ```
-$ 
+//cherry-pickを使って必要の3行のmasterに追加する
+
+$ git cherry-pick 
 ```
 
 ---
