@@ -117,13 +117,14 @@ masterのprofile.md内「4.」の下に変更を
 
 
 ```
-$ 
+$ git rebase `rebase用のbranch`
 ```
 ---
 ## *Lesson6 commitをまとめる* 
 
 ```
-$ 
+$ git rebase -i 
+
 ```
 ---
 
