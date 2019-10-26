@@ -96,13 +96,47 @@ masterブランチにプロフィールを反映したいが、
 
 `cherry-pick` は、branchごとではなく、  
 commitごとのmergeをすることができる。
+```
+$ git cherry-pic `commit ID`
+```
+
+cherry-pickしたcommitは、  
+新規commitとして追加される
+```
+$ git log
+```
+---
+## *Lesson5 cherry-pickで複数のcommitをする1*  
+
+別のbranchの複数の必要なcommitを選択する  
 
 ```
 $ 
 ```
 
+---
+## *Lesson6 cherry-pickで複数のcommitをする2* 
 
-テスト
+別のbranchの一定の間の必要なcommitを一気にする  
+
+```
+$ 
+```
+
+---
+## *Lesson7 rebaseをする* 
+
+```
+$ 
+```
+---
+## *Lesson8 commitをまとめる* 
+
+```
+$ 
+```
+---
+
 
 
 
