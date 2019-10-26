@@ -107,43 +107,20 @@ cherry-pickしたcommitは、
 ```
 $ git log
 ```
----
-## *Lesson5 cherry-pickで複数のcommitをする*   
-  
-masterからcherry-pick用のbranchを作成しcheckoutする  
-profile.mdの「3.」の下に「不要」と記載しcommit  
-次に「必要」と記載しcommit　←これを3回繰り返す    
-最後に「不要」と記載しcommit  
-上記を３回繰り返し、 計5回のcommitを行う。   
-```
-不要
-必要
-必要
-必要
-不要
-```
-ファイルには6行追加される。  
-  
-```
-//cherry-pickを使って必要の3行のmasterに追加する
-
-$ git cherry-pick  `1回目の不要のcommit　ID`..`4回目の必要のcommit ID`
-```
-先頭は、含めるcommitの１つ前のcommit IDを指定するのがわかりにくい  
 
 ---
-## *Lesson6 rebaseをする* 
+## *Lesson5 rebaseをする* 
 
 masterからrebase用のbranchを作成  
-rebase用のbranchのprofile.md内「4.」の下に変更を加えて   
-masterのprofile.md内「5.」の下に変更を
+rebase用のbranchのprofile.md内「3.」の下に変更を加えて   
+masterのprofile.md内「4.」の下に変更を
 
 
 ```
 $ 
 ```
 ---
-## *Lesson8 commitをまとめる* 
+## *Lesson6 commitをまとめる* 
 
 ```
 $ 
