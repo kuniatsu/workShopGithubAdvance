@@ -118,14 +118,26 @@ masterのprofile.md内「4.」の下に変更を
 
 ```
 $ git rebase `rebase用のbranch`
+$ git log --graph
 ```
 ---
 ## *Lesson6 commitをまとめる* 
 
-```
-$ git rebase -i 
+profile.mdに複数回commitを行う。  
+(commitのメッセージはわかりやすく数字などをつけておくと良い)  
+
 
 ```
+$ git log --oneline
+$ git rebase -i `まとめるcommitの一つ前のid`
+$ git log --graph
+```
+
+まとめるcommmitに書かれているpickをsに変える
+:wqで保存して完了
+
+
+
 ---
 
 
