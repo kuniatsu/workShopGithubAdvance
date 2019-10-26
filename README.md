@@ -50,21 +50,23 @@ profile.mdファイルを変更し
 masterブランチにmergeしましょう。  
 
 ```
-//リポジトリの情報を更新
-$ git fetch
+//branchを確認 (masterになっている事)
+$ git branch
+
+//masterから自分のbranchを作成
+$ git checkout -b `自分の名前等`
 
 //自分のbranchを確認
-$ git branch -a
+$ git branch
 
-//自分のbranchに変更
-$ git checkout `名前branch`
-
-//profile.mdファイルを変更しpushまでする。
+//profile.mdファイルの１行目を変更しcommitまでする。
 
 //masterブランチに変更
 $ git checkout master
 
-//使用しているbranchを確認
+//profile.mdファイルの２行目を変更しcommitまでする。
+
+//使用しているbranchを確認　(masterである事)
 $ git branch
 
 //masterブランチに自分branchの情報をmergeする
@@ -106,41 +108,36 @@ cherry-pickしたcommitは、
 $ git log
 ```
 ---
-## *Lesson5 cherry-pickで複数のcommitをする1*  
-
-別のbranchの複数の必要なcommitを選択する 
+## *Lesson5 cherry-pickで複数のcommitをする*   
   
 masterからcherry-pick用のbranchを作成しcheckoutする  
-profile.mdの「3.」の下に「必要」と記載しcommit  
-次に「不要」と記載しcommit  
-上記を３回繰り返し、  
+profile.mdの「3.」の下に「不要」と記載しcommit  
+次に「必要」と記載しcommit　←これを3回繰り返す    
+最後に「不要」と記載しcommit  
+上記を３回繰り返し、 計5回のcommitを行う。   
 ```
-必要
 不要
 必要
-不要
+必要
 必要
 不要
 ```
-と6行追加する。
-
+ファイルには6行追加される。  
+  
 ```
 //cherry-pickを使って必要の3行のmasterに追加する
 
-$ git cherry-pick 
+$ git cherry-pick  `1回目の不要のcommit　ID`..`4回目の必要のcommit ID`
 ```
+先頭は、含めるcommitの１つ前のcommit IDを指定するのがわかりにくい  
 
 ---
-## *Lesson6 cherry-pickで複数のcommitをする2* 
+## *Lesson6 rebaseをする* 
 
-別のbranchの一定の間の必要なcommitを一気にする  
+masterからrebase用のbranchを作成  
+rebase用のbranchのprofile.md内「4.」の下に変更を加えて   
+masterのprofile.md内「5.」の下に変更を
 
-```
-$ 
-```
-
----
-## *Lesson7 rebaseをする* 
 
 ```
 $ 
