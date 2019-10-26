@@ -46,8 +46,8 @@ $ git clone `URL`
 ## *Lesson2 Mergeをする*  
 
 masterブランチから新しい自分用のbranchを切って  
-profile.mdファイルを変更し  
-masterブランチにmergeしましょう。
+profile.mdファイルを変更し    
+masterブランチにmergeしましょう。  
 
 ```
 //リポジトリの情報を更新
@@ -59,7 +59,7 @@ $ git branch -a
 //自分のbranchに変更
 $ git checkout `名前branch`
 
-//profile.mdファイルを変更する
+//profile.mdファイルを変更しpushまでする。
 
 //masterブランチに変更
 $ git checkout master
@@ -70,31 +70,39 @@ $ git branch
 //masterブランチに自分branchの情報をmergeする
 $ git merge `名前branch`
 
+//logを確認しよう
+$ git log --graph
+
 ```
-master
+masterに自身の情報が反映されているか確認しましょう  
+
 
 
 ---
 ## *Lesson3 Mergeしたら内容が消える???*  
 
-masterブランチのprofile.mdの
+```
+①kuniatsuブランチに切り替えてprofile.mdの内容を確認  
+②masterブランチにkuniatsuブランチをmerge  
+```
 
-```
-$ git checkout kuniatsu
-```
-kuniatsuブランチのprofile.mdにはプロフィールが書かれている。
+kuniatsuブランチのprofile.mdにはkuniatsuプロフィールが書かれている。
 このブランチをmasterブランチにmergeして、
 masterブランチにプロフィールを反映したいが、
 反映されない。それはなぜか？？？
 
+---
+## *Lesson4 cherry-pickで解決する*  
+
+`cherry-pick` は、branchごとではなく、  
+commitごとのmergeをすることができる。
+
+```
+$ 
+```
 
 
 
-
-複数addする
-addを戻す
-
-差分ではなく、commitを管理しているという事
 
 
 
