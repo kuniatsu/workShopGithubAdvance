@@ -129,18 +129,3 @@ $ git rebase -i
 ---
 
 
-
-
-reset
-
-merge
-
-cherry-pick
-
-rebase
-
-rebase -s
-
-
-
-mergeテスト
